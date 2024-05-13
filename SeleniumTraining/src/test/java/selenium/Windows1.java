@@ -24,7 +24,7 @@ public class Windows1 {
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//*[@id='Tabbed']//button")).click();
 		
-		Set s = driver.getWindowHandles();
+		Set<String> s = driver.getWindowHandles();
 		System.out.println(s);
 		Iterator<String> itr = s.iterator();
 		String parentWindow = itr.next();

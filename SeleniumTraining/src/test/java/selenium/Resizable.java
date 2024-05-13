@@ -15,6 +15,7 @@ public class Resizable {
 		
 		WebDriver driver = new ChromeDriver();
 		Actions act = new Actions(driver);
+		
 		driver.manage().window().maximize();
 		driver.get("https://demo.automationtesting.in/Resizable.html");
 		Thread.sleep(3000);

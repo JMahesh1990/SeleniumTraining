@@ -58,7 +58,7 @@ public class WebdriverMethods {
 		Set<String> hyrWindowHandles = driver.getWindowHandles();
 		System.out.println(hyrWindowHandles);
 		
-		Iterator itr = hyrWindowHandles.iterator();
+		Iterator<String> itr = hyrWindowHandles.iterator();
 		while(itr.hasNext()) {
 			System.out.println(itr.next());
 		}

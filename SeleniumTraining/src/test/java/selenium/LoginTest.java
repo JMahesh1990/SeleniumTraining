@@ -34,6 +34,7 @@ public class LoginTest {
 		}
 		driver.manage().window().maximize();
 		driver.get("https://www.saucedemo.com/");
+		
 		driver.findElement(By.xpath("//*[@id='user-name']")).sendKeys("standard_user");
 		driver.findElement(By.xpath("//*[@id='password']")).sendKeys("secret_sauce");
 		driver.findElement(By.xpath("//*[@id='login-button']")).click();

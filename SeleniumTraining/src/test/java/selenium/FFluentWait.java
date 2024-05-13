@@ -7,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -18,6 +17,7 @@ public class FFluentWait {
 		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		
 		WebDriver driver = new ChromeDriver();
+		
 		driver.manage().window().maximize();
 		driver.get("https://www.softwaretestingmaterial.com/selenium-fluentwait/");
 		
@@ -26,7 +26,7 @@ public class FFluentWait {
 				.pollingEvery(Duration.ofSeconds(2))
 				.ignoring(Exception.class);
 		
-		String str = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"post-1750\"]/div/header/h1"))).getText();
+		String str = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='post-1750']/div/header/h1"))).getText();
 		System.out.println(str);
 		
 		Thread.sleep(5000);

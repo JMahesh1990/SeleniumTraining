@@ -17,16 +17,20 @@ public class JJavaScriptExecutor {
 		
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		driver.manage().window().maximize();
 		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
+		driver.manage().window().maximize();
 		driver.get("https://demo.guru99.com/V4/");
+		Thread.sleep(2000);
+		
 		WebElement txt_username = driver.findElement(By.xpath("//*[@name='uid']"));
 		WebElement txt_password = driver.findElement(By.xpath("//*[@name='password']"));
 		driver.findElement(By.xpath("//*[@name='password']"));
 		WebElement btn_login = driver.findElement(By.xpath("//*[@value='LOGIN']"));
 		WebElement btn_reset = driver.findElement(By.xpath("//*[@value='RESET']"));
 		
+		js.executeScript("arguments[0].click();", btn_reset);
 		js.executeScript("arguments[0].value='Mahesh';", txt_username);
 		js.executeScript("arguments[0].value='Jejurkar';", txt_password);
 		Thread.sleep(2000);

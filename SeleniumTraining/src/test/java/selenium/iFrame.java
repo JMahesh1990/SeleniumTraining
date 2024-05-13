@@ -12,6 +12,7 @@ public class iFrame {
 		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		
 		WebDriver driver = new ChromeDriver();
+		
 		driver.manage().window().maximize();
 		driver.get("https://demo.automationtesting.in/Frames.html");
 		Thread.sleep(5000);

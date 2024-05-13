@@ -15,8 +15,8 @@ public class DragAndDrop {
 		
 		WebDriver driver = new ChromeDriver();
 		Actions act = new Actions(driver);
-		driver.manage().window().maximize();
 		
+		driver.manage().window().maximize();
 		driver.get("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html");
 		Thread.sleep(5000);
 		

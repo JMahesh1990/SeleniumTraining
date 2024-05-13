@@ -13,8 +13,6 @@ public class AuthTest {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
-		//driver.get("http://the-internet.herokuapp.com/basic_auth");
-		
 		driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");
 		
 		Thread.sleep(5000);
