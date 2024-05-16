@@ -17,7 +17,6 @@ public class FileUploadAutoIT {
 		driver.manage().window().maximize();
 		
 		Actions act = new Actions(driver);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
 		driver.get("https://demo.automationtesting.in/FileUpload.html");
 		Thread.sleep(2000);
