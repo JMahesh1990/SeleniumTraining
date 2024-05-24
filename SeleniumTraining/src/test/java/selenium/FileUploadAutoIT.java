@@ -30,7 +30,7 @@ public class FileUploadAutoIT {
 		
 		
 		Thread.sleep(7000);
-		driver.close();
+		//driver.close();
 		
 
 	}
