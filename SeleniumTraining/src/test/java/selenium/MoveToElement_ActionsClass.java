@@ -14,15 +14,15 @@ public class MoveToElement_ActionsClass {
 		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		
 		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		Actions act = new Actions(driver);
 		
+		driver.manage().window().maximize();
 		driver.get("https://www.javatpoint.com/");
 		Thread.sleep(5000);
+		
 		WebElement aboutMe = driver.findElement(By.xpath("//*[text()='About Me']"));
 		
-		Actions a = new Actions(driver);
-		a.moveToElement(aboutMe);
-		a.build().perform();
+		act.moveToElement(aboutMe).build().perform();
 		
 		Thread.sleep(5000);
 		driver.close();
