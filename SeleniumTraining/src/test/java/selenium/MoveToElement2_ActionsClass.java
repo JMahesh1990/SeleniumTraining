@@ -40,9 +40,7 @@ public class MoveToElement2_ActionsClass {
 		WebElement droparea = driver.findElement(By.xpath("//*[@id='droparea']"));
 		
 		act.dragAndDrop(angular, droparea).build().perform();
-		Thread.sleep(2000);
 		act.dragAndDrop(mongo, droparea).build().perform();
-		Thread.sleep(2000);
 		act.dragAndDrop(node, droparea).build().perform();
 		
 		Thread.sleep(5000);
