@@ -12,19 +12,21 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class DragAndDrop2_ActionClass {
+public class DragAndDrop2_ActionsClass {
 
 	public static void main(String[] args) throws Exception {
-		WebDriverManager.chromedriver().setup();
+		//WebDriverManager.chromedriver().setup();
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//BrowserDriver//chromedriver.exe");
 		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		
 		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		
 		Actions act = new Actions(driver);
 		
 		driver.manage().window().maximize();
 		driver.get("https://demo.automationtesting.in/Static.html");
+		System.out.println(driver.getTitle());
 		
 		WebElement angular = driver.findElement(By.xpath("//*[@id='angular']"));
 		WebElement mongo = driver.findElement(By.xpath("//*[@id='mongo']"));
@@ -32,14 +34,19 @@ public class DragAndDrop2_ActionClass {
 		
 		WebElement droparea = driver.findElement(By.xpath("//*[@id='droparea']"));
 		
-		act.dragAndDrop(node, droparea).build().perform();
+		Thread.sleep(2000);
+		
+		act.dragAndDrop(angular, droparea).build().perform();
 		Thread.sleep(2000);
 		act.dragAndDrop(mongo, droparea).build().perform();
 		Thread.sleep(2000);
-		act.dragAndDrop(angular, droparea).build().perform();
+		act.dragAndDrop(node, droparea).build().perform();
+
+		act.build().perform();
+		
 		
 		Thread.sleep(5000);
-		driver.close();
+		//driver.close();
 	}
 
 }

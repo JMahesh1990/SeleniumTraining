@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class DragAndDrop_ActionClass {
+public class DragAndDrop_ActionsClass {
 
 	public static void main(String[] args) throws Exception {
 		WebDriverManager.chromedriver().setup();
